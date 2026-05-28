@@ -20,7 +20,13 @@
       "rotate": 180,
       "attrs": {}
     },
-    { "type": "wokwi-dht22", "id": "dht1", "top": -306.9, "left": 263.4, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -306.9,
+      "left": 263.4,
+      "attrs": { "temperature": "33.1", "humidity": "18.5" }
+    },
     {
       "type": "wokwi-buzzer",
       "id": "bz1",
@@ -43,6 +49,13 @@
       "top": -313.66,
       "left": 422.63,
       "attrs": { "i2cAddress": "0x3c" }
+    },
+    {
+      "type": "board-bmp180",
+      "id": "bmp1",
+      "top": -330.56,
+      "left": -38.14,
+      "attrs": { "pressure": "71000" }
     }
   ],
   "connections": [
@@ -54,10 +67,8 @@
     [ "pir1:GND", "bb1:tn.20", "black", [ "v0" ] ],
     [ "pir1:OUT", "esp:26", "orange", [ "v0" ] ],
     [ "ldr1:GND", "bb1:tn.1", "black", [ "h19.2", "v18.8" ] ],
-    [ "ldr1:AO", "esp:25", "#8f4814", [ "h9.6", "v85.7", "h393.6", "v9.6" ] ],
     [ "bb1:tp.5", "ldr1:VCC", "red", [ "v0" ] ],
     [ "gas1:GND", "bb1:tn.2", "black", [ "h0" ] ],
-    [ "gas1:AOUT", "esp:12", "green", [ "h19.2", "v57.6" ] ],
     [ "pir1:VCC", "bb1:bp.11", "red", [ "v0" ] ],
     [ "gas1:VCC", "bb1:bp.1", "red", [ "h9.6", "v75.9" ] ],
     [ "servo1:V+", "bb1:bp.5", "red", [ "h0" ] ],
@@ -76,7 +87,13 @@
     [ "oled1:GND", "bb1:tn.23", "black", [ "v-9.6", "h-96" ] ],
     [ "oled1:SCL", "esp:4", "violet", [ "v-19.2", "h115.5", "v316.8" ] ],
     [ "oled1:SDA", "esp:2", "white", [ "v-9.6", "h115.27", "v307.2" ] ],
-    [ "esp:14", "dht1:SDA", "purple", [ "h0" ] ]
+    [ "esp:14", "dht1:SDA", "purple", [ "h0" ] ],
+    [ "gas1:AOUT", "esp:35", "green", [ "h422.4", "v-9.6" ] ],
+    [ "ldr1:AO", "esp:34", "#8f4814", [ "v56.9", "h412.65" ] ],
+    [ "bmp1:VCC", "bb1:tp.2", "red", [ "h38.4", "v105.6" ] ],
+    [ "bmp1:GND", "bb1:tp.3", "black", [ "h0" ] ],
+    [ "esp:4", "bmp1:SCL", "magenta", [ "h105.6", "v-336", "h-585.6", "v9.6" ] ],
+    [ "esp:2", "bmp1:SDA", "gray", [ "h124.8", "v-374.4", "h-595.2", "v9.6" ] ]
   ],
   "dependencies": {}
 }

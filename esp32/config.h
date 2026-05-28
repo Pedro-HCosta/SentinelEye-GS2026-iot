@@ -1,8 +1,8 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-const char* WIFI_SSID = "Wokwi-GUEST";
-const char* WIFI_PASSWORD = "";
+const char* WIFI_SSID = "SUA_REDE";
+const char* WIFI_PASSWORD = "SUA_SENHA";
 
 const char* MQTT_BROKER = "broker.hivemq.com";
 const int MQTT_PORT = 1883;
@@ -13,8 +13,9 @@ const char* TOPIC_STATUS = "sentineleye/posto01/status";
 
 #define DHT_PIN 14
 #define PIR_PIN 26
-#define LDR_PIN 25
-#define MQ2_PIN 12
+
+#define LDR_PIN 34
+#define MQ2_PIN 35
 
 #define SERVO_PIN 16
 
