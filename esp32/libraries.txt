@@ -1,0 +1,6 @@
+WiFi
+PubSubClient
+DHT sensor library
+ESP32Servo
+Adafruit GFX Library
+Adafruit SSD1306
