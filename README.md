@@ -91,7 +91,7 @@ venv\Scripts\activate
 
 ## 3. Instalar dependências
 ```
-pip install -r requirements.txt
+pip install -r dashboard/requirements.txt
 ```
 
 ## Executando o dashboard
