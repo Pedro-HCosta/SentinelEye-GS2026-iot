@@ -42,7 +42,13 @@
       "left": 165.42,
       "attrs": {}
     },
-    { "type": "wokwi-rgb-led", "id": "rgb1", "top": -149.6, "left": 538.7, "attrs": {} },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -149.6,
+      "left": 538.7,
+      "attrs": { "common": "cathode" }
+    },
     {
       "type": "board-ssd1306",
       "id": "oled1",

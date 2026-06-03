@@ -13,8 +13,7 @@ A solução simula um sensor de fronteira físico — ESP32 com sensores ambient
 sentineleye-gs2026-iot/
 │
 ├── esp32/
-│   ├── sketch.ino
-│   ├── config.h
+│   ├── sketch.ino  
 │   ├── libraries.txt
 │   └── diagram.json
 │
@@ -105,8 +104,8 @@ streamlit run app.py
 O projeto pode ser simulado no Wokwi utilizando os arquivos `sketch.ino`, `diagram.json` e `libraries.txt`.
 
 ## Configuração Wi-Fi
-No arquivo `config.h`:
-```cpp
+No arquivo `sketch.ino`:
+```
 const char* WIFI_SSID     = "SUA_REDE";
 const char* WIFI_PASSWORD = "SUA_SENHA";
 ```
